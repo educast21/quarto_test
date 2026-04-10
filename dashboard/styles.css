@@ -1,0 +1,154 @@
+/*-- scss:rules --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap');
+
+/* === TIPOGRAFÍA === */
+.reveal h1, .reveal h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-transform: none;
+}
+
+.reveal h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.78em;
+  color: #e84c0e;
+  margin-top: 0.4em;
+  margin-bottom: 0.2em;
+}
+
+.reveal p, .reveal li {
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+/* === TAMAÑO DE FUENTE GLOBAL (evita overflow) === */
+.reveal .slides section {
+  font-size: 0.82em;
+}
+
+/* === CAJA DESTACADA (reemplaza .callout-dato y .callout-importante) === */
+/* Uso: <div class="caja-azul"> ... </div>  */
+/* Uso: <div class="caja-naranja"> ... </div> */
+.reveal .caja-azul {
+  background: rgba(26, 58, 92, 0.12);
+  border-left: 4px solid #1a3a5c;
+  padding: 0.6em 1em;
+  border-radius: 0 6px 6px 0;
+  margin: 0.3em 0;
+}
+
+.reveal .caja-naranja {
+  background: rgba(232, 76, 14, 0.1);
+  border-left: 4px solid #e84c0e;
+  padding: 0.6em 1em;
+  border-radius: 0 6px 6px 0;
+  margin: 0.3em 0;
+}
+
+/* === PILARES (slide 3) === */
+.reveal .pilar {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 8px;
+  padding: 0.8em;
+  text-align: center;
+  color: #ffffff;
+}
+
+.reveal .pilar h3 {
+  color: #ffffff;
+  font-size: 0.75em;
+}
+
+.reveal .pilar p {
+  color: rgba(255,255,255,0.85);
+  font-size: 0.8em;
+  margin: 0.2em 0;
+}
+
+/* === FOOTER Y SLIDE NUMBER === */
+.reveal .footer {
+  font-size: 0.48em;
+  color: #888;
+  font-family: 'Source Sans 3', sans-serif;
+}
+
+.reveal .slide-number {
+  background-color: #1a3a5c;
+  color: white;
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 0.5em;
+}
+
+/* === TABSETS === */
+.reveal .panel-tabset {
+  font-size: 0.85em;
+}
+
+.reveal .panel-tabset .nav-tabs .nav-link.active {
+  background-color: #1a3a5c;
+  color: white;
+  border-radius: 4px 4px 0 0;
+}
+
+/* === TABLAS === */
+.reveal table {
+  font-size: 0.72em;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.reveal table thead tr th {
+  background-color: #1a3a5c;
+  color: white;
+  padding: 0.4em 0.7em;
+}
+
+.reveal table tbody tr:nth-child(even) {
+  background-color: rgba(26,58,92,0.06);
+}
+
+.reveal table tbody tr td {
+  padding: 0.35em 0.7em;
+  border-bottom: 1px solid #ddd;
+}
+
+/* === TEXTO BLANCO EN FONDOS OSCUROS === */
+.reveal section[data-background-color="#1a3a5c"] h2,
+.reveal section[data-background-color="#1a3a5c"] h3,
+.reveal section[data-background-color="#1a3a5c"] p,
+.reveal section[data-background-color="#1a3a5c"] li,
+.reveal section[data-background-color="#1a7a4a"] h2,
+.reveal section[data-background-color="#1a7a4a"] h3,
+.reveal section[data-background-color="#1a7a4a"] p,
+.reveal section[data-background-color="#1a7a4a"] li,
+.reveal section[data-background-color="#2d3436"] h2,
+.reveal section[data-background-color="#2d3436"] h3,
+.reveal section[data-background-color="#2d3436"] p,
+.reveal section[data-background-color="#2d3436"] li {
+  color: #ffffff;
+}
+
+/* h3 en fondos oscuros no debe ser naranja */
+.reveal section[data-background-color="#1a3a5c"] h3,
+.reveal section[data-background-color="#1a7a4a"] h3,
+.reveal section[data-background-color="#2d3436"] h3 {
+  color: rgba(255,255,255,0.75);
+}
+
+/* === BLOCKQUOTE (usado en slide 1) === */
+.reveal blockquote {
+  border-left: 4px solid #e84c0e;
+  background: rgba(232, 76, 14, 0.08);
+  padding: 0.5em 1em;
+  font-style: normal;
+  color: inherit;
+  border-radius: 0 6px 6px 0;
+}

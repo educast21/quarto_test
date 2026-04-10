@@ -1,0 +1,273 @@
+---
+title: "Pobreza en México"
+subtitle: "Storytelling y Objetivos de Desarrollo Sostenible (ODS)"
+author: "Pumatécnicos"
+---
+
+## ¿Qué viene a tu mente al pensar en pobreza? {background-image="images/fondo-pobreza.jpg" background-opacity="0.4" background-color="#1a3a5c"}
+
+::: {.incremental}
+* ¿Personas en condición de calle?
+* ¿Lugares remotos del país?
+* **La realidad es más compleja.**
+:::
+
+. . .
+
+> La pobreza no es solo falta de ingresos; es una condición que **vulnera la dignidad** y limita derechos fundamentales.
+
+---
+
+## Evolución de la Medición {background-image="images/fondo-medicion.jpg" background-opacity="0.12" transition="convex"}
+
+Históricamente, México usó un enfoque **unidimensional** basado únicamente en el ingreso.
+
+::: columns
+::: {.column width="50%"}
+### El Umbral Económico
+
+Se define una **línea de pobreza** que representa el ingreso mínimo para adquirir una canasta de bienes indispensables. Se compara con el ingreso de cada persona para determinar si es pobre.
+:::
+
+::: {.column width="50%"}
+### El Nuevo Enfoque
+
+La pobreza también está asociada a condiciones que:
+
+- Vulneran la dignidad de las personas
+- Limitan sus derechos y libertades fundamentales
+- Impiden la satisfacción de sus necesidades básicas
+- Imposibilitan su plena integración social
+:::
+:::
+
+---
+
+## Los Tres Pilares del Análisis {background-color="#1a3a5c"}
+
+Hoy abordaremos la pobreza a través de **tres lentes fundamentales**:
+
+```{=html}
+<div style="display:flex; gap:1.2em; margin-top:1em;">
+
+  <div style="flex:1; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.25); border-top:3px solid #e84c0e; border-radius:8px; padding:1em; text-align:center;">
+    <div style="font-size:1.6em; margin-bottom:0.3em;">💰</div>
+    <div style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.9em; color:#fff; text-transform:uppercase; letter-spacing:0.05em;">Monetario</div>
+    <div style="color:rgba(255,255,255,0.8); font-size:0.78em; margin-top:0.3em;">Ingresos y Bienestar</div>
+    <div style="color:rgba(255,255,255,0.55); font-size:0.72em; margin-top:0.2em; font-style:italic;">Metas 1.1 y 1.2</div>
+  </div>
+
+  <div style="flex:1; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.25); border-top:3px solid #e84c0e; border-radius:8px; padding:1em; text-align:center;">
+    <div style="font-size:1.6em; margin-bottom:0.3em;">🏠</div>
+    <div style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.9em; color:#fff; text-transform:uppercase; letter-spacing:0.05em;">Necesidades</div>
+    <div style="color:rgba(255,255,255,0.8); font-size:0.78em; margin-top:0.3em;">Derechos Sociales</div>
+    <div style="color:rgba(255,255,255,0.55); font-size:0.72em; margin-top:0.2em; font-style:italic;">Metas 1.3, 1.4, 1.a</div>
+  </div>
+
+  <div style="flex:1; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.25); border-top:3px solid #e84c0e; border-radius:8px; padding:1em; text-align:center;">
+    <div style="font-size:1.6em; margin-bottom:0.3em;">🏭</div>
+    <div style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.9em; color:#fff; text-transform:uppercase; letter-spacing:0.05em;">Capacidades</div>
+    <div style="color:rgba(255,255,255,0.8); font-size:0.78em; margin-top:0.3em;">Trabajo e Industria</div>
+    <div style="color:rgba(255,255,255,0.55); font-size:0.72em; margin-top:0.2em; font-style:italic;">ODS 8 y ODS 9</div>
+  </div>
+
+</div>
+```
+
+---
+
+## 📈 Enfoque Monetario {.smaller background-color="#f0f4f8"}
+
+### Metas 1.1 y 1.2 del ODS 1
+
+::: panel-tabset
+### Visualización
+```{python}
+import plotly.express as px
+import pandas as pd
+
+df = pd.DataFrame({
+    "Entidad": ["Chiapas", "Oaxaca", "Guerrero", "Edomex", "CDMX"],
+    "Pobreza (%)": [75, 70, 66, 48, 30]
+})
+
+fig = px.bar(
+    df, x='Entidad', y='Pobreza (%)', color='Pobreza (%)',
+    color_continuous_scale='Reds',
+    title="Población bajo la Línea de Pobreza (Simulado)"
+)
+fig.update_layout(margin=dict(t=40, b=10), height=350)
+fig.show()
+```
+
+### Análisis
+
+- **Meta 1.1:** Erradicar la pobreza extrema (menos de $2.15 USD/día PPA)
+- **Meta 1.2:** Reducir a la mitad la proporción de personas en pobreza multidimensional
+
+Se requiere actualización de datos para evaluar el impacto real de los programas sociales.
+
+<div class="caja-naranja">
+**Nota metodológica:** Basado en la tercera edición de la metodología de CONEVAL para la medición multidimensional de la pobreza en México.
+</div>
+:::
+
+---
+
+## Protección Social {.smaller background-image="images/fondo-derechos.jpg" background-opacity="0.12"}
+
+### Meta 1.3 del ODS 1 — ¿Cumples con el criterio?
+
+Tienes **protección social** si cuentas con al menos una de estas condiciones:
+
+::: {.incremental}
+* 📋 **Prestaciones de ley** — derecho a la salud y pensión garantizada por el Estado
+* 🏥 **IMSS o Seguro de Salud** — por tu trabajo o adquirido voluntariamente
+* 🧓 **Jubilado o pensionado** — con derecho vigente
+* 👨‍👩‍👧 **Beneficiario de un familiar** — hijos menores de 15 años con IMSS de sus padres
+* 💙 **Pensión para adultos mayores (65+)** — de programa social que supere la línea de pobreza extrema
+:::
+
+---
+
+## Servicios Básicos {.smaller background-color="#1a7a4a"}
+
+### Meta 1.4 del ODS 1
+
+Tu hogar debe contar con acceso a:
+
+::: columns
+::: {.column width="50%"}
+- 💧 **Agua potable**
+- 🚽 **Saneamiento** adecuado
+- ⚡ **Energías limpias** para cocinar y alumbrado
+:::
+
+::: {.column width="50%"}
+- 🗑️ **Recolección de desechos**
+- 📡 **Tecnologías de la información** y comunicación
+:::
+:::
+
+<br>
+
+<div class="caja-naranja">
+La carencia en cualquiera de estos servicios constituye una dimensión de pobreza, independientemente del nivel de ingresos del hogar.
+</div>
+
+---
+
+## Profundizando en las Carencias {.smaller background-image="images/fondo-ods.jpg" background-opacity="0.15" transition="zoom"}
+
+Conectamos cada carencia social con su respectivo ODS:
+
+::: columns
+::: {.column width="50%"}
+
+### [ODS 2: Hambre Cero]{style="color: #e5243b;"}
+🌽 **Seguridad alimentaria**
+
+Mide si el hogar tuvo acceso suficiente y nutritivo a alimentos durante el último año.
+
+### [ODS 4: Educación]{style="color: #c5192d;"}
+📚 **Rezago educativo**
+
+Población de 3 a 15 años fuera de la escuela, o adultos sin educación básica terminada.
+
+:::
+
+::: {.column width="50%"}
+
+### [ODS 3: Salud]{style="color: #4c9f38;"}
+🩺 **Salud de las infancias** (Meta 1n.2)
+
+Acceso efectivo a servicios de salud, con énfasis en niñas, niños y adolescentes.
+
+### [ODS 6: Agua]{style="color: #26bde2;"}
+💧 **Servicios básicos** (Meta 1.4)
+
+Cobertura de agua potable y saneamiento en la vivienda.
+
+:::
+:::
+
+---
+
+## Enfoque de Capacidades {.smaller background-color="#2d3436"}
+
+### ODS 8 y ODS 9 — Trabajo e Industria
+
+::: columns
+::: {.column width="50%"}
+
+### [ODS 8: Trabajo Decente]{style="color: #ff8fab;"}
+📊 Indicadores clave:
+
+- Tasa de desempleo y subempleo
+- Trabajo informal vs. formal
+- Brechas salariales por género y región
+- Acceso a prestaciones laborales
+
+:::
+
+::: {.column width="50%"}
+
+### [ODS 9: Industria e Innovación]{style="color: #ffd166;"}
+🏗️ Indicadores clave:
+
+- Acceso a crédito para pequeñas empresas
+- Inversión pública en I+D
+- Subsidios a la innovación productiva
+- Infraestructura de conectividad
+
+:::
+:::
+
+<br>
+
+<div class="caja-naranja">
+Las capacidades productivas determinan si una persona puede salir de la pobreza de forma sostenida, más allá de los apoyos sociales.
+</div>
+
+---
+
+## Inversión del Gobierno {.smaller background-color="#f0f4f8"}
+
+### Meta 1.a — ¿Cuánto invierte México en reducir la pobreza?
+
+::: columns
+::: {.column width="50%"}
+**Gasto federal en desarrollo social**
+
+- Educación pública
+- Salud universal
+- Infraestructura comunitaria
+- Programas de transferencias directas
+:::
+
+::: {.column width="50%"}
+**Retos identificados**
+
+- Focalización efectiva del gasto
+- Transparencia en el ejercicio presupuestal
+- Evaluación de impacto de los programas
+- Sostenibilidad fiscal a largo plazo
+:::
+:::
+
+---
+
+## Pobreza Multidimensional {background-color="#1a3a5c"}
+
+### Meta 1n.1 — El indicador integral
+
+Una persona es **pobre multidimensional** si tiene:
+
+- **Ingreso insuficiente**, Y
+- **Al menos una carencia social**: educación, salud, seguridad social, alimentación, vivienda o servicios básicos
+
+<br>
+
+<div style="background: rgba(255,255,255,0.15); border-left: 4px solid #e84c0e; padding: 0.6em 1em; border-radius: 0 6px 6px 0;">
+Esta metodología, desarrollada por CONEVAL, es reconocida internacionalmente como referente para la medición de la pobreza con enfoque de derechos humanos.
+</div>

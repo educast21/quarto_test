@@ -1,0 +1,19 @@
+project:
+  type: website
+  output-dir: ../docs
+
+format:
+  revealjs:
+    theme: [default, styles.css]
+    title-slide-attributes:
+      data-background-image: images/fondo-titulo.jpg
+      data-background-opacity: "0.4"
+      data-background-color: "#1a3a5c"
+    logo: images/logo-coneval.jpg
+    footer: "Fuente: CONEVAL (2019)"
+    slide-number: true
+    chalkboard: true
+    transition: slide
+    background-transition: fade
+    preview-links: auto
+    incremental: false
